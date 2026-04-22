@@ -101,4 +101,20 @@
 
     <label for="reminderText">Reminder Text</label>
     <textarea id="reminderText" maxlength="100" placeholder="Enter your reminder..."></textarea>
+    <div class="hint"><span id="charCount">0</span>/100</div>
+
+    <label for="hours">Timer</label>
+    <div class="time-row">
+      <input type="number" id="hours" min="0" max="23" placeholder="Hours" />
+      <input type="number" id="minutes" min="0" max="59" placeholder="Minutes" />
+    </div>
+
+    <div class="buttons">
+      <button id="saveBtn">Save</button>
+      <button id="cancelBtn">Cancel</button>
+    </div>
+
+    <div id="status"></div>
+  </div>
+</body>
 </html>
