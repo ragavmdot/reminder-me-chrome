@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reminder Settings</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 24px;
+    }
+
+    .container {
+      max-width: 420px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+      font-size: 20px;
+      margin-top: 0;
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    textarea,
+    input[type="number"] {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    textarea {
+      resize: none;
+      min-height: 90px;
+      margin-bottom: 6px;
+    }
+
+    .hint {
+      font-size: 12px;
+      color: #666;
+      margin-bottom: 16px;
+      text-align: right;
+    }
+
+    .time-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    button {
+      flex: 1;
+      padding: 10px 14px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    #saveBtn {
+      background: #4CAF50;
+      color: white;
+    }
+
+    #cancelBtn {
+      background: #e0e0e0;
+      color: #222;
+    }
+
+    #status {
+      margin-top: 14px;
+      font-size: 13px;
+      color: #1b5e20;
+      min-height: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Reminder Settings</h1>
+
+    <label for="reminderText">Reminder Text</label>
+    <textarea id="reminderText" maxlength="100" placeholder="Enter your reminder..."></textarea>
+    <div class="hint"><span id="charCount">0</span>/100</div>
+
+    <label for="hours">Timer</label>
+    <div class="time-row">
+      <input type="number" id="hours" min="0" max="23" placeholder="Hours" />
+      <input type="number" id="minutes" min="0" max="59" placeholder="Minutes" />
+    </div>
+
+    <div class="buttons">
+      <button id="cancelBtn">Cancel</button>
+      <button id="saveBtn">Save</button>
+    </div>
+
+    <div id="status"></div>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>
